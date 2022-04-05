@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <ul
+    className="sidenav"
+    id="slide-out"
+  >
+    <li>
+      <div
+        className="user-view"
+      >
+        <div
+          className="background"
+        >
+          <img
+            alt="ssss"
+            src="images/sidebar.jpg"
+          />
+        </div>
+        <a
+          href="/profile"
+        >
+          <img
+            alt="profile"
+            className="circle"
+            src="images/profile.jpg"
+          />
+        </a>
+        <a
+          href="#name"
+        >
+          <span
+            className="white-text name"
+          >
+            
+          </span>
+        </a>
+        <a
+          href="#email"
+        >
+          <span
+            className="white-text email"
+          >
+            
+          </span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div
+        className="divider"
+      />
+    </li>
+    <li>
+      <a
+        className="subheader"
+        href="#!"
+      >
+        Menu
+      </a>
+    </li>
+    <li>
+      <a
+        className="waves-effect"
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        className="waves-effect"
+        href="/usrdash"
+      >
+        Dashboard
+      </a>
+      <a
+        className="waves-effect"
+        href="/profile"
+      >
+        Profile
+      </a>
+      <a
+        className="waves-effect"
+        href="/alltrain"
+      >
+        All Train
+      </a>
+      <a
+        className="waves-effect"
+        href="/bookings"
+      >
+        Bookings
+      </a>
+    </li>
+  </ul>
+</div>
+`;

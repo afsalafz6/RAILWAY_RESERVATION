@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <nav>
+    <div
+      className="nav-wrapper"
+      style={
+        Object {
+          "backgroundColor": "#26a69a",
+        }
+      }
+    >
+      <a
+        className="brand-logo"
+        href="/"
+      >
+        Login
+      </a>
+      <ul
+        className="right hide-on-med-and-down"
+        id="nav-mobile"
+      >
+        <li>
+          <a
+            href="/register"
+          >
+            Register
+          </a>
+        </li>
+        <li>
+          <a
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div
+    className="section"
+  />
+  <main>
+    <center>
+      <div
+        className="section"
+      />
+      <h5
+        className="indigo-text"
+      >
+        Please, login into your account
+      </h5>
+      <div
+        className="section"
+      />
+      <div
+        className="container"
+      >
+        <div
+          className="z-depth-1 grey lighten-4 row"
+          style={
+            Object {
+              "border": "1px solid #EEE",
+              "display": "inline-block",
+              "padding": "32px 48px 0px 48px",
+            }
+          }
+        >
+          <form
+            className="col s12"
+            method="post"
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="col s12"
+              />
+            </div>
+            <div
+              className="row"
+            >
+              <div
+                className="input-field col s12"
+              >
+                <span
+                  className="teal-text helper-text"
+                  htmlFor="username"
+                >
+                  Username
+                </span>
+                <input
+                  className="validate"
+                  id="email"
+                  name="username"
+                  onChange={[Function]}
+                  required={true}
+                  type="text"
+                  value=""
+                />
+                
+              </div>
+            </div>
+            <div
+              className="row"
+            >
+              <div
+                className="input-field col s12"
+              >
+                <span
+                  className="teal-text helper-text"
+                  htmlFor="password"
+                >
+                  Password
+                </span>
+                <input
+                  className="validate"
+                  id="password"
+                  name="password"
+                  onChange={[Function]}
+                  required={true}
+                  type="password"
+                  value=""
+                />
+                
+              </div>
+              <label
+                style={
+                  Object {
+                    "float": "right",
+                  }
+                }
+              >
+                <a
+                  className="pink-text"
+                  href="#!"
+                >
+                  <b>
+                    Forgot Password?
+                  </b>
+                </a>
+              </label>
+            </div>
+            <br />
+            <center>
+              <div
+                className="row"
+              >
+                <button
+                  className="col s12 btn btn-large waves-effect"
+                  name="btn_login"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "backgroundColor": "#26a69a",
+                    }
+                  }
+                  type="submit"
+                >
+                  Login
+                </button>
+              </div>
+            </center>
+          </form>
+        </div>
+      </div>
+      <a
+        href="/register"
+      >
+        Register Account
+      </a>
+    </center>
+    <div
+      className="section"
+    />
+    <div
+      className="section"
+    />
+  </main>
+</div>
+`;

@@ -1,0 +1,5 @@
+com.train.booking
+com.train.booking.controller
+com.train.booking.model
+com.train.booking.repo
+com.train.booking.service

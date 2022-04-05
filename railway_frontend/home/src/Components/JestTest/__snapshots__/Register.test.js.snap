@@ -1,0 +1,228 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <nav>
+    <div
+      className="nav-wrapper"
+      style={
+        Object {
+          "backgroundColor": "#26a69a",
+        }
+      }
+    >
+      <a
+        className="brand-logo"
+        href="/"
+      >
+        Register
+      </a>
+      <ul
+        className="right hide-on-med-and-down"
+        id="nav-mobile"
+      >
+        <li>
+          <a
+            href="/login"
+          >
+            Login
+          </a>
+        </li>
+        <li>
+          <a
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div
+    className="container"
+  >
+    <div
+      className="section"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col s12 center"
+        >
+          <h3>
+            <i
+              className="mdi-content-send brown-text"
+            />
+          </h3>
+          <h4
+            className="left-align"
+          >
+            Registration Form
+          </h4>
+          <div
+            className="left-align light"
+          >
+            <form
+              className="col s12"
+            >
+              <div
+                className="row"
+              >
+                <div
+                  className="input-field col s12"
+                >
+                  <input
+                    className="validate"
+                    id="UserName"
+                    name="username"
+                    onChange={[Function]}
+                    type="text"
+                    value=""
+                  />
+                  <label
+                    htmlFor="UserName"
+                  >
+                    Username
+                  </label>
+                  
+                </div>
+                <div
+                  className="input-field col s12"
+                >
+                  <input
+                    className="validate"
+                    id="name"
+                    name="name"
+                    onChange={[Function]}
+                    type="text"
+                    value=""
+                  />
+                  <label
+                    htmlFor="name"
+                  >
+                    Name
+                  </label>
+                  
+                </div>
+                <div
+                  className="input-field col s12"
+                >
+                  <input
+                    className="validate"
+                    id="age"
+                    name="age"
+                    onChange={[Function]}
+                    type="number"
+                    value=""
+                  />
+                  <label
+                    htmlFor="age"
+                  >
+                    Age
+                  </label>
+                  
+                </div>
+                <div
+                  className="input-field col s12"
+                >
+                  <p>
+                    <label>
+                      <input
+                        defaultChecked={true}
+                        name="gender"
+                        onChange={[Function]}
+                        type="radio"
+                        value="male"
+                      />
+                      <span>
+                        Male
+                      </span>
+                    </label>
+                    <label>
+                      <input
+                        name="gender"
+                        onChange={[Function]}
+                        type="radio"
+                        value="female"
+                      />
+                      <span>
+                        Female
+                      </span>
+                    </label>
+                  </p>
+                </div>
+                <div
+                  className="input-field col s12"
+                >
+                  <input
+                    className="validate"
+                    id="Email"
+                    name="email"
+                    onChange={[Function]}
+                    type="email"
+                    value=""
+                  />
+                  <label
+                    htmlFor="Email"
+                  >
+                    Email
+                  </label>
+                  
+                </div>
+                <div
+                  className="input-field col s12"
+                >
+                  <input
+                    className="validate"
+                    id="phone"
+                    name="phone"
+                    onChange={[Function]}
+                    type="number"
+                    value=""
+                  />
+                  <label
+                    htmlFor="phone"
+                  >
+                    Phone
+                  </label>
+                  
+                </div>
+                <div
+                  className="input-field col s12"
+                >
+                  <input
+                    className="validate"
+                    id="Password"
+                    name="password"
+                    onChange={[Function]}
+                    type="password"
+                    value=""
+                  />
+                  <label
+                    htmlFor="Password"
+                  >
+                    Password
+                  </label>
+                  
+                </div>
+                <div
+                  className="input-field col s12"
+                >
+                  <button
+                    className="waves-effect waves-light btn"
+                    onClick={[Function]}
+                    type="submit"
+                  >
+                    Register
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

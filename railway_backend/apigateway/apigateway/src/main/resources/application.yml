@@ -1,0 +1,37 @@
+server:
+  port: 5005
+
+eureka:
+  instance:
+    hostname: localhost
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/user/**,/**
+        - id: train-service
+          uri: lb://train-service
+          predicates:
+            - Path=/traindetails/**,/**
+        - id: booking-service
+          uri: lb://booking-service
+          predicates:
+            - Path=/bookingdetails/**,/**
+        - id: payment-gateway
+          uri: lb://payment-gateway
+          predicates:
+            - Path=/payment/**,/**
