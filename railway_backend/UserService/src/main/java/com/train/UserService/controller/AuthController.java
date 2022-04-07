@@ -20,7 +20,7 @@ import com.train.UserService.repo.UserRepo;
 import com.train.UserService.services.UserService;
 import com.train.UserService.utils.JwtUtil;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 @RestController
 public class AuthController {
 
