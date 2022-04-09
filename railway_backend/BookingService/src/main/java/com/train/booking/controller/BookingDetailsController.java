@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.razorpay.RazorpayException;
 import com.train.booking.model.BookingDetails;
 import com.train.booking.model.BookingResponse;
@@ -26,6 +25,8 @@ import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 @CrossOrigin(origins = "*")
 @OpenAPIDefinition
 @RestController
+//@EnableHystrix
+//@EnableHystrixDashboard
 @RequestMapping("/bookingdetails")
 public class BookingDetailsController {
 
@@ -34,6 +35,9 @@ public class BookingDetailsController {
 
 	@Autowired
 	BookingService bookingServ;
+	
+//	@Autowired
+//	RestTemplate template;
 
 	@GetMapping("/")
 	public String home() {
@@ -136,5 +140,18 @@ public class BookingDetailsController {
 	public void CancelBooking(@PathVariable("bookingId") String bookid) {
 		bookingServ.cancelBooking(bookid);
 	}
+	
+//	@HystrixCommand(groupKey = "all trains", commandKey = "all trains", fallbackMethod = "allTrainsFallBack")
+//	@GetMapping("/alltrains")
+//	public String allTrains() {
+//		String trainServiceResponse = template.getForObject("http://localhost:5001/traindetails/getall", String.class);
+////		String trainServiceResponse = template.getForObject("http://localhost:5002/user/", String.class);
+//		System.out.println("trainServiceResponse" + trainServiceResponse);
+//		return trainServiceResponse;
+//	}
+//	
+//	public String allTrainsFallBack() {
+//		return "Service Gateway Failed...!";
+//	}
 
 }
