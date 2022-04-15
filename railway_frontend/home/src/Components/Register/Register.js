@@ -286,6 +286,7 @@ class Register extends Component {
                       </div>
                       <div className="input-field col s12">
                         <button
+                          id="register"
                           type="submit"
                           className="waves-effect waves-light btn"
                           onClick={this.onSubmit}

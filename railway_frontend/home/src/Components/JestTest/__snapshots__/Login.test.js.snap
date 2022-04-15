@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders correctly Login Component Renders correctly 1`] = `
 <div>
   <nav>
     <div
@@ -149,6 +149,7 @@ exports[`renders correctly 1`] = `
               >
                 <button
                   className="col s12 btn btn-large waves-effect"
+                  id="loginbtn"
                   name="btn_login"
                   onClick={[Function]}
                   style={

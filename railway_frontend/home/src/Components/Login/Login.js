@@ -186,6 +186,7 @@ class Login extends Component {
                   <center>
                     <div className="row">
                       <button
+                        id="loginbtn"
                         type="submit"
                         name="btn_login"
                         className="col s12 btn btn-large waves-effect"
