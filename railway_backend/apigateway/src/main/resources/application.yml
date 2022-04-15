@@ -1,0 +1,79 @@
+server:
+  port: 5005
+
+eureka:
+  instance:
+    hostname: localhost
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/user/**,/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: user-service
+                fallbackuri: forward:/userServiceFallback
+
+        - id: train-service
+          uri: lb://train-service
+          predicates:
+            - Path=/traindetails/**,/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: train-service
+                fallbackuri: forward:/trainServiceFallback
+
+        - id: booking-service
+          uri: lb://booking-service
+          predicates:
+            - Path=/bookingdetails/**,/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: booking-service
+                fallbackuri: forward:/bookingServiceFallback
+            
+        - id: payment-gateway
+          uri: lb://payment-gateway
+          predicates:
+            - Path=/payment/**,/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: payment-gateway
+                fallbackuri: forward:/paymentServiceFallback
+
+
+
+
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMillieseconds: 5000
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
