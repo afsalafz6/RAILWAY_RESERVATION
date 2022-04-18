@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.train.trainservice.customexception.TrainDetailsNotFoundException;
 import com.train.trainservice.model.TrainDetails;
 import com.train.trainservice.repo.TrainDetailsRepository;
 
@@ -18,10 +19,16 @@ public class TrainDetailsService {
 
 	public List<TrainDetails> getAllTrains() {
 		List<TrainDetails> alltrain = this.traindetailsrepo.findAll();
+		if(alltrain.isEmpty()) {
+			throw new TrainDetailsNotFoundException("601","No Trains Available !");
+		}
 		return alltrain;
 	}
 
 	public TrainDetails addTrainDetails(TrainDetails trainmodel) {
+		if(trainmodel.getTrain_id().isEmpty()) {
+			throw new TrainDetailsNotFoundException("601","No Train ID Available !");
+		}
 		TrainDetails train = this.traindetailsrepo.save(trainmodel);
 		return train;
 	}
@@ -50,7 +57,12 @@ public class TrainDetailsService {
 	}
 
 	public ResponseEntity<?> getTrainbyId(String id) {
-		return ResponseEntity.ok(this.traindetailsrepo.findById(id));
+//		return ResponseEntity.ok(this.traindetailsrepo.findById(id));
+		if(this.traindetailsrepo.findById(id).isEmpty()) {
+			throw new TrainDetailsNotFoundException("604","Train not found with this ID !");
+		}else {
+			return ResponseEntity.ok(this.traindetailsrepo.findById(id));
+		}
 	}
 	
 	
